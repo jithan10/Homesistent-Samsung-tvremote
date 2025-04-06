@@ -1,0 +1,336 @@
+type: vertical-stack
+cards:
+
+  # --- Power & Input Buttons ---
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: Power
+        icon: mdi:power
+        icon_height: 50px
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          target:
+            area_id: living_room
+            entity_id: remote.lv
+            device_id: 8e5f764e151f0b76385492633b3be51f
+          data:
+            device: Samsung2
+            command: on/off
+            hold_secs: 0.2
+        entity: remote.brodlink_remote
+
+      - type: button
+        name: Input
+        icon: mdi:import
+        icon_height: 50px
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          target:
+            area_id: living_room
+            entity_id: remote.lv_remote
+            device_id: 8e5f764e151f0b76385492633b3be51f
+          data:
+            device: Samsung2
+            command: source
+        entity: remote.lv
+
+  # --- Volume & Channel Controls ---
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: button
+            name: Vol +
+            icon: mdi:volume-plus
+            icon_height: 50px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              target:
+                area_id: living_room
+                entity_id: remote.lv_remote
+                device_id: 8e5f764e151f0b76385492633b3be51f
+              data:
+                device: Samsung2
+                command: vol+
+            entity: remote.lv
+
+          - type: button
+            name: Ch +
+            icon: mdi:chevron-up
+            icon_height: 50px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              target:
+                area_id: living_room
+                entity_id: remote.lv_remote
+                device_id: 8e5f764e151f0b76385492633b3be51f
+              data:
+                device: Samsung2
+                command: ch+
+            entity: remote.lv
+
+      - type: horizontal-stack
+        cards:
+          - type: button
+            name: Vol -
+            icon: mdi:volume-minus
+            icon_height: 50px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              target:
+                area_id: living_room
+                entity_id: remote.lv_remote
+                device_id: 8e5f764e151f0b76385492633b3be51f
+              data:
+                device: Samsung2
+                command: vol-
+            entity: remote.lv
+
+          - type: button
+            name: Ch -
+            icon: mdi:chevron-down
+            icon_height: 50px
+            tap_action:
+              action: call-service
+              service: remote.send_command
+              target:
+                area_id: living_room
+                entity_id: remote.lv_remote
+                device_id: 8e5f764e151f0b76385492633b3be51f
+              data:
+                device: Samsung2
+                command: ch-
+            entity: remote.lv
+
+  # --- Back, Menu, Box Shortcuts ---
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: Back
+        icon: mdi:undo
+        icon_height: 50px
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          target:
+            area_id: living_room
+            entity_id: remote.lv_remote
+            device_id: 8e5f764e151f0b76385492633b3be51f
+          data:
+            device: Samsung2
+            command: return
+        entity: remote.lv
+
+      - type: button
+        icon: mdi:android
+        icon_height: 50px
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          target:
+            area_id: living_room
+            entity_id: remote.lv_remote
+            device_id: 8e5f764e151f0b76385492633b3be51f
+          data:
+            device: Samsung2
+            command: box
+        entity: remote.lv
+
+      - type: button
+        name: Menu
+        icon: mdi:menu
+        icon_height: 50px
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          target:
+            area_id: living_room
+            entity_id: remote.lv_remote
+            device_id: 8e5f764e151f0b76385492633b3be51f
+          data:
+            device: Samsung2
+            command: menu
+        entity: remote.lv
+
+  # --- Mute ---
+  - type: button
+    name: Mute
+    icon: mdi:volume-off
+    icon_height: 50px
+    tap_action:
+      action: call-service
+      service: remote.send_command
+      target:
+        area_id: living_room
+        entity_id: remote.lv_remote
+        device_id: 8e5f764e151f0b76385492633b3be51f
+      data:
+        device: Samsung2
+        command: mute
+    entity: remote.lv
+
+  # --- Directional Controls ---
+  - type: button
+    name: Up
+    icon: mdi:arrow-up-bold
+    icon_height: 49px
+    tap_action:
+      action: call-service
+      service: remote.send_command
+      target:
+        area_id: living_room
+        entity_id: remote.lv_remote
+        device_id: 8e5f764e151f0b76385492633b3be51f
+      data:
+        device: Samsung2
+        command: up
+    entity: remote.lv
+
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: Left
+        icon: mdi:arrow-left-bold
+        icon_height: 50px
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          target:
+            area_id: living_room
+            entity_id: remote.lv_remote
+            device_id: 8e5f764e151f0b76385492633b3be51f
+          data:
+            device: Samsung2
+            command: left
+        entity: remote.lv
+
+      - type: button
+        name: OK
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          target:
+            area_id: living_room
+            entity_id: remote.lv_remote
+            device_id: 8e5f764e151f0b76385492633b3be51f
+          data:
+            device: Samsung2
+            command: ok
+        entity: remote.lv
+
+      - type: button
+        name: Right
+        icon: mdi:arrow-right-bold
+        icon_height: 50px
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          target:
+            area_id: living_room
+            entity_id: remote.lv
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+          data:
+            device: Samsung2
+            command: right
+        entity: remote.lv
+
+  - type: button
+    name: Down
+    icon: mdi:arrow-down-bold
+    icon_height: 50px
+    tap_action:
+      action: call-service
+      service: remote.send_command
+      target:
+        area_id: living_room
+        entity_id: remote.lv_remote
+        device_id: 8e5f764e151f0b76385492633b3be51f
+      data:
+        device: Samsung2
+        command: down
+    entity: remote.lv
+
+  # --- Volume Jump Buttons ---
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: Vol -10
+        icon: mdi:volume-medium
+        icon_height: 50px
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          target:
+            area_id: living_room
+            entity_id: remote.lv_remote
+            device_id: 8e5f764e151f0b76385492633b3be51f
+          data:
+            device: Samsung2
+            command: vol-
+            num_repeats: 10
+        entity: remote.lv
+
+      - type: button
+        name: Vol +10
+        icon: mdi:volume-high
+        icon_height: 50px
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          target:
+            area_id: living_room
+            entity_id: remote.lv_remote
+            device_id: 8e5f764e151f0b76385492633b3be51f
+          data:
+            device: Samsung2
+            command: vol+
+            num_repeats: 10
+        entity: remote.lv
+
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: Vol -50
+        icon: mdi:volume-medium
+        icon_height: 50px
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          target:
+            area_id: living_room
+            entity_id: remote.lv_remote
+            device_id: 8e5f764e151f0b76385492633b3be51f
+          data:
+            device: Samsung2
+            command: vol-
+            num_repeats: 50
+            delay_secs: 0
+        entity: remote.lv
+
+      - type: button
+        name: Vol +50
+        icon: mdi:volume-high
+        icon_height: 50px
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          target:
+            area_id: living_room
+            entity_id: remote.lv_remote
+            device_id: 8e5f764e151f0b76385492633b3be51f
+          data:
+            device: Samsung2
+            command: vol+
+            num_repeats: 50
+            delay_secs: 0
+        entity: remote.lv
+
+  # --- Optional Media Control Card ---
+  - type: media-control
+    entity: media_player.living_room_tv
