@@ -1,0 +1,379 @@
+type: vertical-stack
+cards:
+
+  # --- Power and Input ---
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: Power
+        icon: mdi:power
+        icon_height: 50px
+        show_icon: true
+        show_name: false
+        show_state: false
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: on/off
+            device: LG
+            hold_secs: 0.2
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+      - type: button
+        name: Input
+        icon: mdi:import
+        icon_height: 50px
+        show_icon: true
+        show_name: false
+        show_state: false
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: Input
+            device: LG
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+  # --- Volume Controls ---
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: Vol -
+        icon: mdi:volume-minus
+        icon_height: 50px
+        show_icon: true
+        show_name: false
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: Vol down
+            device: LG
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+      - type: button
+        name: Vol +
+        icon: mdi:volume-plus
+        icon_height: 50px
+        show_icon: true
+        show_name: false
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: Vol up
+            device: LG
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+  # --- Quick Access Buttons ---
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: Mute
+        icon: mdi:volume-off
+        icon_height: 50px
+        show_icon: true
+        show_name: false
+        show_state: false
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: Mute
+            device: LG
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+      - type: button
+        name: Eco
+        icon: mdi:sprout-outline
+        icon_height: 20px
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: Eco
+            device: LG
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+      - type: button
+        name: HOME
+        icon: mdi:home
+        icon_height: 40px
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: HOME
+            device: LG
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+      - type: button
+        name: Q.MENU
+        icon: mdi:menu
+        icon_height: 40px
+        show_icon: false
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: Q.MENU
+            device: LG
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+      - type: button
+        name: Exit
+        icon: mdi:location-exit
+        icon_height: 50px
+        show_icon: false
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: Exit
+            device: LG
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+  # --- Directional Controls ---
+  - type: button
+    name: Up
+    icon: mdi:arrow-up-bold
+    icon_height: 49px
+    show_icon: true
+    show_name: false
+    entity: remote.brodlink_remote
+    tap_action:
+      action: call-service
+      service: remote.send_command
+      service_data:
+        command: up
+        device: LG
+      target:
+        device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: Left
+        icon: mdi:arrow-left-bold
+        icon_height: 50px
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: Left
+            device: LG
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+      - type: button
+        name: OK
+        icon: mdi:image-filter-center-focus-strong
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: OK
+            device: LG
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+      - type: button
+        name: Right
+        icon: mdi:arrow-right-bold
+        icon_height: 50px
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: Right
+            device: LG
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+  - type: button
+    name: Down
+    icon: mdi:arrow-down-bold
+    icon_height: 50px
+    show_name: false
+    entity: remote.brodlink_remote
+    tap_action:
+      action: call-service
+      service: remote.send_command
+      service_data:
+        command: Down
+        device: LG
+      target:
+        device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+  # --- Jump Volume Buttons ---
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: Vol -10
+        icon: mdi:volume-medium
+        icon_height: 50px
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: Vol down
+            device: LG
+            num_repeats: 10
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+      - type: button
+        name: Vol +10
+        icon: mdi:volume-high
+        icon_height: 50px
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: Vol up
+            device: LG
+            num_repeats: 10
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: Vol -50
+        icon: mdi:volume-medium
+        icon_height: 50px
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: Vol down
+            device: LG
+            num_repeats: 50
+            delay_secs: 0
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+      - type: button
+        name: Vol +50
+        icon: mdi:volume-high
+        icon_height: 50px
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          service_data:
+            command: Vol up
+            device: LG
+            num_repeats: 50
+            delay_secs: 0
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+  # --- Media and Lighting Controls ---
+  - type: media-control
+    entity: media_player.enj_room_tv
+
+  - type: light
+    entity: light.lamp
+
+  - type: horizontal-stack
+    cards:
+      - type: button
+        entity: light.ben
+        icon_height: 50px
+        tap_action:
+          action: toggle
+
+      - type: button
+        entity: light.main
+        icon_height: 50px
+        tap_action:
+          action: toggle
+
+  # --- Color Buttons (Red, Green, Yellow, Blue) ---
+  - type: horizontal-stack
+    cards:
+      - type: button
+        name: RED
+        icon: mdi:circle
+        icon_height: 20px
+        show_icon: false
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          data:
+            device: LG
+            command: RED
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+      - type: button
+        name: GREEN
+        icon: mdi:circle
+        icon_height: 20px
+        show_icon: false
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          data:
+            device: LG
+            command: GREEN
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+      - type: button
+        name: YELLOW
+        icon: mdi:circle
+        icon_height: 20px
+        show_icon: false
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          data:
+            device: LG
+            command: YELLOW
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
+
+      - type: button
+        name: BLUE
+        icon: mdi:circle
+        icon_height: 20px
+        show_icon: false
+        entity: remote.brodlink_remote
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          data:
+            device: LG
+            command: blue
+          target:
+            device_id: a62b4ed4bf798a3c21da78ee9cf49630
